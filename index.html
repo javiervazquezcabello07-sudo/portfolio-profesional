@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portfolio - Javier Vázquez</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --color-principal: #1c2229;
+      --color-acento: #14b8a6; /* Turquesa oscuro óptimo para accesibilidad sobre fondo claro */
+      --color-acento-brillante: #20fcd2; /* Turquesa vivo para elementos sobre fondo oscuro */
+      --fondo-claro: #fbfbfc;
+    }
+
+    body {
+      padding-top: 56px;
+      background-color: var(--fondo-claro);
+      color: #334155;
+    }
+
+    /* Animación e interactividad de los iconos de navegación */
+    .transition-icon i {
+      transition: all 0.2s ease-in-out;
+    }
+    .transition-icon:hover i {
+      color: var(--color-acento-brillante) !important;
+      transform: scale(1.1);
+    }
+
+    /* Efectos modernos para las tarjetas de proyectos */
+    .card-proyecto {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-bottom: 4px solid var(--color-acento) !important;
+    }
+    .card-proyecto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    /* Estilos para las tarjetas de habilidades */
+    .card-habilidad {
+      background-color: #1a2332 !important;
+      border: 1px solid #2e3c52 !important;
+      transition: border-color 0.3s ease;
+    }
+    .card-habilidad:hover {
+      border-color: var(--color-acento-brillante) !important;
+    }
+    .card-habilidad h5 {
+      color: #f8fafc;
+    }
+    .card-habilidad p {
+      color: #cbd5e1 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#sobre-mi">
+        JV<span style="color: var(--color-acento-brillante);">.</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link text-white me-3" href="#sobre-mi">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white me-3" href="#proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white me-3" href="#habilidades">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white me-3" href="#contacto">Contacto</a>
+          </li>
+          
+          <li class="nav-item d-flex gap-3 ms-lg-3 mt-3 mt-lg-0">
+            <a href="https://github.com/javiervazquezcabello07-sudo" target="_blank" class="text-white fs-5 lh-1 transition-icon" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/javier-v%C3%A1zquezcabello/" target="_blank" class="text-white fs-5 lh-1 transition-icon" aria-label="LinkedIn">
+              <i class="fab fa-linkedin" style="color: var(--color-acento-brillante);"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="sobre-mi" class="py-5" style="background-color: var(--fondo-claro);">
+    <div class="container my-5">
+      <div class="row align-items-center text-center text-md-start">
+        
+        <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+          <img src="img/tu-foto.jpg" alt="Fotografía profesional de Javier Vázquez" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover; border: 5px solid var(--color-acento);">
+        </div>
+        
+        <div class="col-12 col-md-8">
+          <h1 class="display-4 fw-bold mb-2 text-dark">Hola, soy <span style="color: var(--color-acento);">Javier Vázquez</span></h1>
+          <h3 class="text-muted fw-normal mb-3">Desarrollador Web Junior</h3>
+          <p class="lead text-secondary mb-4">
+Estudiante de 1ºDAW en el IES Jacarandá.            Destaco por trabajar en equipo y por mi organización  .       </p>
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+            <a href="#contacto" class="btn btn-dark btn-lg px-4 shadow-sm" style="background-color: var(--color-principal);">Contacto</a>
+            <a href="#proyectos" class="btn btn-outline-dark btn-lg px-4">Ver Proyectos</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="py-5" style="background-color: #f1f5f9;">
+    <div class="container py-4">
+      
+      <h2 class="text-center fw-bold mb-5 text-dark" style="font-size: 2.2rem;">Proyectos Destacados</h2>
+
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm card-proyecto" style="border-radius: 8px; overflow: hidden;">
+            <img src="img/proyecto-starwars.png" class="card-img-top" alt="Captura de pantalla de la aplicación Alianza Rebelde" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <h4 class="card-title fw-bold mb-2 text-dark" style="font-size: 1.3rem;">Proyecto Alianza Rebelde</h4>
+              <p class="card-text text-muted flex-grow-1" style="font-size: 0.95rem; line-height: 1.5;">
+                App web interactiva con gestión de pilotos, naves y misiones. Estructura modular limpia separando HTML, CSS y JS con un diseño inmersivo.
+              </p>
+              <div class="mb-3">
+                <span class="badge rounded-pill bg-dark text-white px-3 py-2 me-1">JavaScript</span>
+                <span class="badge rounded-pill bg-primary px-3 py-2 me-1">HTML</span>
+                <span class="badge rounded-pill bg-info text-dark px-3 py-2">CSS</span>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-2">
+                <a href="https://proyecto-star-wars-sandy.vercel.app/" target="_blank" class="btn fw-bold py-2 shadow-sm text-dark d-flex align-items-center justify-content-center" style="background-color: var(--color-acento-brillante); border: none; font-size: 0.95rem;">
+                  <i class="fas fa-external-link-alt me-2"></i> Ver página
+                </a>
+                <a href="https://github.com/danimoron7/ProyectoStarWars.git" target="_blank" class="btn text-white py-2 d-flex align-items-center justify-content-center" style="background-color: var(--color-principal); border: none; font-size: 0.95rem;">
+                  <i class="fab fa-github me-2"></i> Ver código
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm card-proyecto" style="border-radius: 8px; overflow: hidden;">
+            <img src="img/proyecto-deportes.png" class="card-img-top" alt="Captura de pantalla del portal web de deportes" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <h4 class="card-title fw-bold mb-2 text-dark" style="font-size: 1.3rem;">Portal Web de Deportes</h4>
+              <p class="card-text text-muted flex-grow-1" style="font-size: 0.95rem; line-height: 1.5;">
+                Sitio web multipágina con secciones independientes para F1, Fútbol, Tenis y Baloncesto. Enfoque en maquetación fluida y navegación semántica.
+              </p>
+              <div class="mb-3">
+                <span class="badge rounded-pill bg-primary px-3 py-2 me-1">HTML</span>
+                <span class="badge rounded-pill bg-info text-dark px-3 py-2 me-1">CSS</span>
+                <span class="badge rounded-pill bg-secondary px-3 py-2">Diseño Web</span>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-2">
+                <a href="https://manuga07-byte.github.io/proyecto-web/" target="_blank" class="btn fw-bold py-2 shadow-sm text-dark d-flex align-items-center justify-content-center" style="background-color: var(--color-acento-brillante); border: none; font-size: 0.95rem;">
+                  <i class="fas fa-external-link-alt me-2"></i> Ver página
+                </a>
+                <a href="https://github.com/manuga07-byte/proyecto-web" target="_blank" class="btn text-white py-2 d-flex align-items-center justify-content-center" style="background-color: var(--color-principal); border: none; font-size: 0.95rem;">
+                  <i class="fab fa-github me-2"></i> Ver código
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm card-proyecto" style="border-radius: 8px; overflow: hidden;">
+            <img src="img/proyecto-streaming.jpg" class="card-img-top" alt="Diagrama o representación de la base de datos de streaming" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <h4 class="card-title fw-bold mb-2 text-dark" style="font-size: 1.3rem;">Plataforma Streaming</h4>
+              <p class="card-text text-muted flex-grow-1" style="font-size: 0.95rem; line-height: 1.5;">
+                Modelado de base de datos. Diseño E/R, normalización, paso a tablas e inserts para la optimización de consultas.
+              </p>
+              <div class="mb-3">
+                <span class="badge rounded-pill bg-danger text-white px-3 py-2 me-1">Oracle DB</span>
+                <span class="badge rounded-pill bg-success text-white px-3 py-2">MySQL</span>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-auto">
+                <a href="https://github.com/javiervazquezcabello07-sudo" target="_blank" class="btn text-white py-2 d-flex align-items-center justify-content-center" style="background-color: var(--color-principal); border: none; font-size: 0.95rem;">
+                  <i class="fab fa-github me-2"></i> Ver código
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="py-5" style="background-color: var(--fondo-claro);">
+    <div class="container py-4">
+      
+      <h2 class="text-center fw-bold mb-5 text-dark" style="font-size: 2.2rem;">Habilidades Técnicas</h2>
+
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3 card-habilidad" style="border-radius: 8px;">
+            <div class="card-body">
+              <h5 class="fw-bold mb-4">Lenguajes</h5>
+              <div class="row g-3 justify-content-center">
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">JavaScript</p>
+                </div>
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">HTML5</p>
+                </div>
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">CSS3</p>
+                </div>
+                <div class="col-4 mt-3">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">Java</p>
+                </div>
+                <div class="col-4 mt-3">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">Python</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3 card-habilidad" style="border-radius: 8px;">
+            <div class="card-body">
+              <h5 class="fw-bold mb-4">Frameworks</h5>
+              <div class="row g-3 justify-content-center">
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">Bootstrap</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3 card-habilidad" style="border-radius: 8px;">
+            <div class="card-body">
+              <h5 class="fw-bold mb-4">Bases de Datos</h5>
+              <div class="row g-3 justify-content-center">
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="Oracle" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">Oracle DB</p>
+                </div>
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">MySQL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3 card-habilidad" style="border-radius: 8px;">
+            <div class="card-body">
+              <h5 class="fw-bold mb-4">Herramientas</h5>
+              <div class="row g-3 justify-content-center">
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">Git</p>
+                </div>
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">GitHub</p>
+                </div>
+                <div class="col-4">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code" style="width: 40px; height: 40px;">
+                  <p class="mt-1 mb-0" style="font-size: 0.75rem;">VS Code</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-5" style="background-color: #0b1a30;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 text-center">
+          
+          <div class="card border-0 p-5 shadow-lg" style="border-radius: 8px; background-color: #ffffff;">
+            <div class="card-body">
+              <div class="mb-4">
+                <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--color-acento);"></i>
+              </div>
+              
+              <h3 class="fw-bold text-dark mb-2" style="font-size: 1.75rem;">¿Tienes algún proyecto en mente?</h3>
+              <p class="text-muted mb-4">Ponte en contacto conmigo y hablemos.</p>
+              
+              <a href="mailto:javiervazquezcabello07@gmail.com" class="btn fw-bold py-3 w-100 text-dark d-flex align-items-center justify-content-center shadow-sm" style="background-color: var(--color-acento-brillante); border: none; font-size: 1rem; border-radius: 6px;">
+                <i class="fas fa-paper-plane me-2"></i> Enviarme un correo
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
